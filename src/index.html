@@ -6,13 +6,14 @@
     <title>Румтибет</title>
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="stylesheet" href="css/normalize.css">
+    <script defer src="js/main.js"></script>
 </head>
 <body>
     <main>
         <section class="main-section">
             <header class="header">
                 <div class="container header__container">
-                    <a class="header__logo-link" href="#"><img class="header__logo-img" src="img/logo.svg" width="137" height="72" alt="Румтибет лого"></a>
+                    <a class="header__logo-link" href="/"><img class="header__logo-img" src="img/logo.svg" width="137" height="72" alt="Румтибет лого"></a>
                     <nav class="header__nav nav">
                         <ul class="nav__list list-reset">
                             <li class="nav__item"><a class="nav__link" href="#">Главная</a></li>
@@ -27,7 +28,7 @@
                 </div>
             </header>
             <div class="container main-section__container">
-                <h1 class="main-section__title">Насладись прогулкой в&nbsp;горах с&nbsp;командой единомышленников</h1>
+                <h1 class="main-section__title title-1">Насладись прогулкой в&nbsp;горах с&nbsp;командой единомышленников</h1>
                 <form class="filter" action="#" method="post">
                     <div class="filter__item">
                         <div class="filter__accordeon">
@@ -68,7 +69,27 @@
             </div>
         </section>
 
+        <section class="about">
+            <div class="container about__container">
+                <div class="about__img-wrap">
+                    <img class="about__img about__img--1" src="img/about-1.png" aria-hidden="true" alt="">
+                    <a class="about__link-img" href="#">
+                        <div class="about__play-icon">
+                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.24267 3.65572C7.96389 3.49647 7.64819 3.41323 7.32714 3.41432C7.00609 3.4154 6.69096 3.50078 6.41326 3.6619C6.13557 3.82302 5.90506 4.05424 5.74479 4.33242C5.58451 4.6106 5.5001 4.926 5.5 5.24705V16.7549C5.5001 17.0759 5.58451 17.3913 5.74479 17.6695C5.90506 17.9477 6.13557 18.1789 6.41326 18.34C6.69096 18.5012 7.00609 18.5865 7.32714 18.5876C7.64819 18.5887 7.96389 18.5055 8.24267 18.3462L18.3113 12.5914C18.5917 12.431 18.8248 12.1993 18.9869 11.9199C19.1489 11.6404 19.2343 11.3231 19.2343 11C19.2343 10.677 19.1489 10.3597 18.9869 10.0802C18.8248 9.80079 18.5917 9.56913 18.3113 9.40872L8.24267 3.65572Z" fill="#1A3E3E" />
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="about__content">
+                    <span class="about__min-title min-title">о нашем походе</span>
+                    <h2 class="about__title title-2">Исследуйте все горные массивы мира вместе с&nbsp;нами</h2>
+                    <p class="about__text text-1">Его корни уходят в&nbsp;один фрагмент классической латыни 45&nbsp;года н.э., то&nbsp;есть более двух тысячелетий назад. Ричард МакКлинток, профессор латыни из&nbsp;колледжа Hampden-Sydney, штат Вирджиния, взял одно из&nbsp;самых странных слов в&nbsp;Lorem Ipsum, &quot;consectetur&quot;и занялся его поисками в&nbsp;классической латинской литературе.</p>
+                    <button class="about__btn btn btn--large">Программа тура</button>
+                </div>
+            </div>
+        </section>
     </main>
-    <script src="js/main.js"></script>
 </body>
 </html>

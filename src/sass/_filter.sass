@@ -25,6 +25,20 @@
         color: $white
     &__accordeon-list
         display: none
+        position: absolute
+        width: 270px
+        color: $dark
+        border-radius: 8px
+        background-color: $white
+    &__accordeon-item
+        color: inherit
+        border-radius: 7px
+        padding: 5px 16px
+        cursor: pointer
+        transition: color .2s ease, background-color .2s ease
+        &:hover
+            color: $white
+            background-color: $dark
     &__subitem
         font-weight: 400
         font-size: 14px
