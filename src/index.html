@@ -1,19 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Румтибет</title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
 </head>
 <body>
-    <header>
-        header
-    </header>
-    <header>
-        header
-    </header>
-    <header>
-        header
-    </header>
+    <main>
+        <section class="main-section">
+            <header class="header">
+                <div class="container header__container">
+                    <a class="header__logo-link" href="#"><img class="header__logo-img" src="img/logo.svg" width="137" height="72" alt="Румтибет лого"></a>
+                    <nav class="header__nav nav">
+                        <ul class="nav__list list-reset">
+                            <li class="nav__item"><a class="nav__link" href="#">Главная</a></li>
+                            <li class="nav__item"><a class="nav__link" href="#">Про гида</a></li>
+                            <li class="nav__item"><a class="nav__link" href="#">Программа тура</a></li>
+                            <li class="nav__item"><a class="nav__link" href="#">Стоимость</a></li>
+                            <li class="nav__item"><a class="nav__link" href="#">Блог</a></li>
+                            <li class="nav__item"><a class="nav__link" href="#">Контакты</a></li>
+                        </ul>
+                        <button class="header__btn btn">Консультация</button>
+                    </nav>
+                </div>
+            </header>
+            <div class="container main-section__container">
+                <h1 class="main-section__title">Насладись прогулкой в&nbsp;горах с&nbsp;командой единомышленников</h1>
+                <form class="filter" action="#" method="post">
+                    <div class="filter__item">
+                        <div class="filter__accordeon">
+                            <span class="filter__accordeon-inner">Локация для тура</span>
+                            <img class="filter__accordeon-img" src="img/arrow.svg" width="20" height="20" aria-hidden="true" alt="">
+                        </div>
+                        <ul class="filter__accordeon-list">
+                            <li class="filter__accordeon-item">Африка</li>
+                            <li class="filter__accordeon-item">Италия</li>
+                            <li class="filter__accordeon-item">Индия</li>
+                        </ul>
+                        <span class="filter__subitem">выберите из списка</span>
+                    </div>
+
+                    <div class="filter__item">
+                        <div class="filter__dates">
+                            <input class="filter__date-input filter__date-input--1" type="date" name="date-start" required>
+                            <input class="filter__date-input" type="date" name="date-end" required>
+                        </div>
+                        <span class="filter__subitem">укажите диапазон</span>
+                    </div>
+
+                    <div class="filter__item">
+                        <div class="filter__accordeon">
+                            <span class="filter__accordeon-inner">Участники</span>
+                            <img class="filter__accordeon-img" src="img/arrow.svg" width="20" height="20" aria-hidden="true" alt="">
+                        </div>
+                        <ul class="filter__accordeon-list">
+                            <li class="filter__accordeon-item">4-6</li>
+                            <li class="filter__accordeon-item">7-12</li>
+                            <li class="filter__accordeon-item">Более 13</li>
+                        </ul>
+                        <span class="filter__subitem">минимум 4 человека</span>
+                    </div>
+
+                    <button class="filter__btn btn btn--white">Найти программу</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+    <script src="js/main.js"></script>
 </body>
 </html>
