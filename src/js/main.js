@@ -41,12 +41,15 @@ accordeonItem.forEach((item) => {
   });
 });
 
-// Убирает интерактив при клике вне фильтра
-const filter = document.querySelector(".filter");
+// Убирает интерактив при клике вне аккордеонов
+const accordeon1 = document.querySelector("#accordeon-1");
+const accordeon2 = document.querySelector("#accordeon-2");
 
 document.addEventListener("click", (e) => {
-  const inFilter = e.composedPath().includes(filter);
-  if (!inFilter) {
+  const inAccordeon1 = e.composedPath().includes(accordeon1);
+  const inAccordeon2 = e.composedPath().includes(accordeon2);
+
+  if (!inAccordeon1 && !inAccordeon2) {
     accordeonList.forEach((list) => {
       list.classList.remove("filter__accordeon-list--active");
     });
