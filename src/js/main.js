@@ -1,50 +1,41 @@
 // Аккордеон в фильтре
 const accordeon = document.querySelectorAll(".filter__accordeon");
 const accordeonList = document.querySelectorAll(".filter__accordeon-list");
-
-accordeon.forEach((accord) => {
-  accord.addEventListener("click", function () {
-    // Скрывает все аккордионы
-    accordeonList.forEach((list) => {
-      list.classList.remove("filter__accordeon-list--active");
-    });
-
-    // Расскрывает выбранный аккордион
-    const filterItem = this.closest(".filter__item")
-      .querySelector(".filter__accordeon-list")
-      .classList.toggle("filter__accordeon-list--active");
-  });
-});
-
-// Убирает аккордионы при клике на дату
-const dates = document.querySelector(".filter__dates");
-
-dates.addEventListener("click", function () {
-  accordeonList.forEach((list) => {
-    list.classList.remove("filter__accordeon-list--active");
-  });
-});
-
-// Заменяет содержимое аккордеона при клике на его селекты
-const accordeonItem = document.querySelectorAll(".filter__accordeon-item");
-
-accordeonItem.forEach((item) => {
-  item.addEventListener("click", function () {
-    const list = this.closest(".filter__accordeon-list");
-
-    list.previousElementSibling.innerHTML = `
-          <span class="filter__accordeon-inner">${this.textContent}</span>
-          <img class="filter__accordeon-img" src="img/arrow.svg" width="20" height="20" aria-hidden="true" alt="">
-      `;
-
-    list.classList.remove("filter__accordeon-list--active");
-  });
-});
-
-// Убирает интерактив при клике вне аккордеонов
 const accordeon1 = document.querySelector("#accordeon-1");
 const accordeon2 = document.querySelector("#accordeon-2");
+const accordeonList1 = document.querySelector("#accordeon-list-1");
+const accordeonList2 = document.querySelector("#accordeon-list-2");
 
+// Клик на "Локации для тура"
+accordeon1.addEventListener("click", function () {
+  accordeonList2.classList.remove("filter__accordeon-list--active");
+  accordeonList1.classList.toggle("filter__accordeon-list--active");
+  rotateIconAccord(this);
+});
+
+// Клик на "Участники"
+accordeon2.addEventListener("click", function () {
+  accordeonList1.classList.remove("filter__accordeon-list--active");
+  accordeonList2.classList.toggle("filter__accordeon-list--active");
+  rotateIconAccord(this);
+});
+
+// Поворот стрелки у аккордеонов при клике
+function rotateIconAccord(e) {
+  if (
+    e.nextElementSibling.classList.contains("filter__accordeon-list--active")
+  ) {
+    e.querySelector(".filter__accordeon-img").classList.add(
+      "filter__accordeon-img--active"
+    );
+  } else {
+    e.querySelector(".filter__accordeon-img").classList.remove(
+      "filter__accordeon-img--active"
+    );
+  }
+}
+
+// Убирает интерактив при клике вне аккордеонов
 document.addEventListener("click", (e) => {
   const inAccordeon1 = e.composedPath().includes(accordeon1);
   const inAccordeon2 = e.composedPath().includes(accordeon2);
@@ -54,4 +45,49 @@ document.addEventListener("click", (e) => {
       list.classList.remove("filter__accordeon-list--active");
     });
   }
+  rotateIconAccord(accordeon1);
+  rotateIconAccord(accordeon2);
+});
+
+// Заменяет содержимое аккордеона при клике на его селекты
+const accordeonItem = document.querySelectorAll(".filter__accordeon-item");
+
+accordeonItem.forEach((item) => {
+  item.addEventListener("click", function () {
+    const list = this.closest(".filter__accordeon-list");
+
+    list.previousElementSibling.querySelector(
+      ".filter__accordeon-inner"
+    ).textContent = this.textContent;
+
+    list.classList.remove("filter__accordeon-list--active");
+
+    rotateIconAccord(accordeon1);
+    rotateIconAccord(accordeon2);
+  });
+});
+
+// Изменение карточки при наведении
+const card = document.querySelectorAll(".card");
+const cardInner = document.querySelectorAll(".card__inner-content");
+const cardRating = document.querySelectorAll(".card__rating");
+
+card.forEach((card) => {
+  card.addEventListener("mouseenter", function () {
+    this.querySelector(".card__inner-content").classList.add(
+      "card__inner-content--active"
+    );
+    this.querySelector(".card__rating").classList.add("card__rating--active");
+  });
+});
+
+card.forEach((card) => {
+  card.addEventListener("mouseleave", function () {
+    this.querySelector(".card__inner-content").classList.remove(
+      "card__inner-content--active"
+    );
+    this.querySelector(".card__rating").classList.remove(
+      "card__rating--active"
+    );
+  });
 });

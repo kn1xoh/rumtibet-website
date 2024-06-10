@@ -1,0 +1,71 @@
+.card
+    position: relative
+    border-radius: 32px
+    width: 380px
+    height: 500px
+    overflow: hidden
+    &__img
+        position: absolute
+        top: 0
+        left: 0
+        z-index: -1
+    &__rating
+        position: absolute
+        top: 50px
+        right: 0
+        display: flex
+        align-items: center
+        gap: 4px
+        border-radius: 4px 0 0 4px
+        padding: 4px 8px
+        width: 65px
+        height: 32px
+        backdrop-filter: blur(4px)
+        background: rgba(253, 253, 253, 0.4)
+        transition: opacity .7s ease, visibility .7s ease
+    &__num
+        font-weight: 700
+        font-size: 14px
+        line-height: 129%
+        color: $dark-green
+    &__inner-content
+        position: absolute
+        top: 410px
+        display: flex
+        flex-direction: column
+        width: 380px
+        height: 500px
+        backdrop-filter: blur(3px)
+        background: rgba(255, 255, 255, 0.2)
+        padding: 20px 32px 20px 32px
+        transition: all .4s ease
+    &__top
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin-bottom: 36px
+    &__price
+        display: flex
+        justify-content: center
+        align-items: center
+        font-weight: 600
+        font-size: 20px
+        line-height: 120%
+        color: $white
+        border-radius: 4px
+        width: 86px
+        height: 40px
+        background: rgba(255, 255, 255, 0.3)
+    &__inner-text
+        font-weight: 300
+    &__inner-btn
+        width: 176px
+        margin-top: auto
+
+.card__inner-content--active
+    padding-top: 30px
+    top: 0
+
+.card__rating--active
+    visibility: hidden
+    opacity: 0

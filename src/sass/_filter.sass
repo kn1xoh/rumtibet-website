@@ -19,10 +19,13 @@
         height: 52px
         cursor: pointer
         margin-bottom: 8px
+        user-select: none
     &__accordeon-inner
         font-weight: 700
         font-size: 16px
         color: $white
+    &__accordeon-img
+        transition: transform .2s ease
     &__accordeon-list
         display: none
         position: absolute
@@ -47,7 +50,6 @@
         display: flex
         border: 1px solid $white-2
         border-radius: 8px
-        padding: 0px 10px
         width: 270px
         height: 52px
         cursor: pointer
@@ -58,16 +60,17 @@
         color: #fdfdfd
         background-color: rgba(0, 0, 0, 0)
         border: none
-        padding-left: 10px
+        padding: 0px 10px
         appearance: none
 
 .filter__accordeon-list--active
     display: block
 
+.filter__accordeon-img--active
+    transform: rotate(180deg)
+
 .filter__date-input--1
     position: relative
-    padding-left: 0
-    padding-right: 10px
     &::before
         content: ""
         display: block

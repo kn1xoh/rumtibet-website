@@ -23,7 +23,7 @@
                             <li class="nav__item"><a class="nav__link" href="#">Блог</a></li>
                             <li class="nav__item"><a class="nav__link" href="#">Контакты</a></li>
                         </ul>
-                        <button class="header__btn btn">Консультация</button>
+                        <button class="header__btn btn"><span class="btn__inner">Консультация</span></button>
                     </nav>
                 </div>
             </header>
@@ -35,7 +35,7 @@
                             <span class="filter__accordeon-inner">Локация для тура</span>
                             <img class="filter__accordeon-img" src="img/arrow.svg" width="20" height="20" aria-hidden="true" alt="">
                         </div>
-                        <ul class="filter__accordeon-list">
+                        <ul class="filter__accordeon-list" id="accordeon-list-1">
                             <li class="filter__accordeon-item">Африка</li>
                             <li class="filter__accordeon-item">Италия</li>
                             <li class="filter__accordeon-item">Индия</li>
@@ -56,7 +56,7 @@
                             <span class="filter__accordeon-inner">Участники</span>
                             <img class="filter__accordeon-img" src="img/arrow.svg" width="20" height="20" aria-hidden="true" alt="">
                         </div>
-                        <ul class="filter__accordeon-list">
+                        <ul class="filter__accordeon-list" id="accordeon-list-2">
                             <li class="filter__accordeon-item">4-6</li>
                             <li class="filter__accordeon-item">7-12</li>
                             <li class="filter__accordeon-item">Более 13</li>
@@ -64,7 +64,7 @@
                         <span class="filter__subitem">минимум 4 человека</span>
                     </div>
 
-                    <button class="filter__btn btn btn--white">Найти программу</button>
+                    <button class="filter__btn btn btn--white"><span class="btn__inner">Найти программу</span></button>
                 </form>
             </div>
         </section>
@@ -86,7 +86,7 @@
                     <span class="about__min-title min-title">о нашем походе</span>
                     <h2 class="about__title title-2">Исследуйте все горные массивы мира вместе с&nbsp;нами</h2>
                     <p class="about__text text-1">Его корни уходят в&nbsp;один фрагмент классической латыни 45&nbsp;года н.э., то&nbsp;есть более двух тысячелетий назад. Ричард МакКлинток, профессор латыни из&nbsp;колледжа Hampden-Sydney, штат Вирджиния, взял одно из&nbsp;самых странных слов в&nbsp;Lorem Ipsum, &quot;consectetur&quot;и занялся его поисками в&nbsp;классической латинской литературе.</p>
-                    <button class="about__btn btn btn--large">Программа тура</button>
+                    <a class="about__btn btn btn--large link-reset" href="#"><span class="btn__inner">Программа тура</span></a>
                 </div>
             </div>
         </section>
@@ -113,7 +113,7 @@
                             <p class="offer__inner-text inner-text-1">Для современного мира базовый вектор развития предполагает независимые способы реализации соответствующих условий активизации.</p>
                         </li>
                     </ul>
-                    <button class="offer__btn btn btn--large">Стоимость программ</button>
+                    <a class="offer__btn btn btn--large link-reset" href="#"><span class="btn__inner">Стоимость программ</span></a>
                 </div>
 
                 <div class="offer__img-wrap">
@@ -122,6 +122,84 @@
                     <img class="offer__img" src="img/offer-img-3.png" width="250" height="250" aria-hidden="true" alt="">
                     <img class="offer__img" src="img/offer-img-4.png" width="250" height="250" aria-hidden="true" alt="">
                 </div>
+            </div>
+        </section>
+
+        <section class="product">
+            <div class="container product__container">
+                <span class="product__min-title min-title">по версии отдыхающих</span>
+                <h2 class="product__title title-2">Популярные направления</h2>
+                <div class="product__cards">
+                    <div class="product__card card">
+                        <img class="card__img" src="img/product-1.png" width="380" height="500" aria-hidden="true" alt="">
+
+                        <div class="card__rating">
+                            <img class="card__icon" src="img/star.svg" width="24" height="24" aria-hidden="true" alt="">
+                            <span class="card__num">4.9</span>
+                        </div>
+
+                        <div class="card__inner-content">
+                            <div class="card__top">
+                                <div class="card__title-wrap">
+                                    <h4 class="card__inner-title inner-title-2">Озеро возле гор</h4>
+                                    <span class="card__min-title min-title-2">романтическое приключение</span>
+                                </div>
+                                <div class="card__price"><span class="card__price-inner">480 $</span></div>
+                            </div>
+
+                            <div class="card__inner-text inner-text-2">Его корни уходят в&nbsp;один фрагмент классической латыни 45&nbsp;года н.э., то&nbsp;есть более двух тысячелетий назад. Ричард МакКлинток, профессор латыни из&nbsp;колледжа Hampden-Sydney, штат Вирджиния, взял одно из&nbsp;самых странных слов в&nbsp;Lorem Ipsum, &quot;consectetur&quot;и занялся его поисками в&nbsp;классической латинской литературе.</div>
+
+                            <a class="card__inner-btn btn link-reset" href="#"><span class="btn__inner">Программа тура</span></a>
+                        </div>
+                    </div>
+
+                    <div class="product__card card">
+                        <img class="card__img" src="img/product-2.png" width="380" height="500" aria-hidden="true" alt="">
+
+                        <div class="card__rating">
+                            <img class="card__icon" src="img/star.svg" width="24" height="24" aria-hidden="true" alt="">
+                            <span class="card__num">4.5</span>
+                        </div>
+
+                        <div class="card__inner-content">
+                            <div class="card__top">
+                                <div class="card__title-wrap">
+                                    <h4 class="card__inner-title inner-title-2">Ночь в горах</h4>
+                                    <span class="card__min-title min-title-2">в компании друзей</span>
+                                </div>
+                                <div class="card__price"><span class="card__price-inner">480 $</span></div>
+                            </div>
+
+                            <div class="card__inner-text inner-text-2">Его корни уходят в&nbsp;один фрагмент классической латыни 45&nbsp;года н.э., то&nbsp;есть более двух тысячелетий назад. Ричард МакКлинток, профессор латыни из&nbsp;колледжа Hampden-Sydney, штат Вирджиния, взял одно из&nbsp;самых странных слов в&nbsp;Lorem Ipsum, &quot;consectetur&quot;и занялся его поисками в&nbsp;классической латинской литературе.</div>
+
+                            <a class="card__inner-btn btn link-reset" href="#"><span class="btn__inner">Программа тура</span></a>
+                        </div>
+                    </div>
+
+                    <div class="product__card card">
+                        <img class="card__img" src="img/product-3.png" width="380" height="500" aria-hidden="true" alt="">
+
+                        <div class="card__rating">
+                            <img class="card__icon" src="img/star.svg" width="24" height="24" aria-hidden="true" alt="">
+                            <span class="card__num">5.0</span>
+                        </div>
+
+                        <div class="card__inner-content">
+                            <div class="card__top">
+                                <div class="card__title-wrap">
+                                    <h4 class="card__inner-title inner-title-2">Йога в горах</h4>
+                                    <span class="card__min-title min-title-2">для тех, кто забоится о себе</span>
+                                </div>
+                                <div class="card__price"><span class="card__price-inner">480 $</span></div>
+                            </div>
+
+                            <div class="card__inner-text inner-text-2">Его корни уходят в&nbsp;один фрагмент классической латыни 45&nbsp;года н.э., то&nbsp;есть более двух тысячелетий назад. Ричард МакКлинток, профессор латыни из&nbsp;колледжа Hampden-Sydney, штат Вирджиния, взял одно из&nbsp;самых странных слов в&nbsp;Lorem Ipsum, &quot;consectetur&quot;и занялся его поисками в&nbsp;классической латинской литературе.</div>
+
+                            <a class="card__inner-btn btn link-reset" href="#"><span class="btn__inner">Программа тура</span></a>
+                        </div>
+                    </div>
+                </div>
+                <a class="product__btn btn btn--large link-reset" href="#"><span class="btn__inner">Рейтинг направлений</span></a>
             </div>
         </section>
     </main>
