@@ -1,0 +1,44 @@
+.article
+    display: flex
+    gap: 24px
+    border-radius: 10px
+    padding: 16px
+    width: 580px
+    height: 312px
+    background-color: $white
+    font-weight: 700
+    color: $dark
+    &__content
+        display: flex
+        flex-direction: column
+        padding: 16px 0
+    &__text-wrap
+        max-height: 204px
+        width: 294px
+    &__title
+        font-size: 24px
+        line-height: 133%
+        margin-bottom: 24px
+        display: -webkit-box
+        -webkit-line-clamp: 3
+        -webkit-box-orient: vertical
+        overflow: hidden
+    &__text
+        font-weight: 400
+        font-size: 14px
+        line-height: 143%
+        display: -webkit-box
+        -webkit-line-clamp: 4
+        -webkit-box-orient: vertical
+        overflow: hidden
+    &__bottom
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin-top: auto
+    &__date
+        font-size: 14px
+        line-height: 143%
+        color: $yellow
+    &__link-read
+        color: $dark-green
