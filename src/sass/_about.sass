@@ -9,11 +9,11 @@
         position: relative
         width: 480px
         height: 526px
-    &__img--1
-        position: absolute
-        top: 0
-        left: 0
+    &__img
+        object-fit: cover
+        border-radius: 24px
     &__link-img
+        position: relative
         display: flex
         justify-content: center
         align-items: center
@@ -23,7 +23,6 @@
         border-radius: 24px
         width: 350px
         height: 400px
-        background-image: url("../img/about-2.png")
     &__play-icon
         display: flex
         justify-content: center
@@ -41,3 +40,14 @@
         margin-bottom: 40px
     &__text
         margin-bottom: 40px
+
+.about__img--1
+    position: absolute
+    top: 0
+    left: 0
+    z-index: -2
+
+.about__img--2
+    position: absolute
+    inset: 0
+    z-index: -1
