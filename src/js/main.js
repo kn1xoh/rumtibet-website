@@ -91,3 +91,22 @@ card.forEach((card) => {
     );
   });
 });
+
+// Модальное окно для галереи fancybox
+Fancybox.bind('[data-fancybox="gallery"]', {});
+
+// Бургер меню
+const burger = document.querySelector(".burger");
+const burgerMenu = document.querySelector(".burger-menu");
+const body = document.querySelector("body");
+
+burger.addEventListener("click", () => {
+  burgerMenu.classList.toggle("burger-menu--active");
+  burger.classList.toggle("burger--active");
+  // Убирает прокрутку при расскрытом меню бургера
+  if (burger.classList.contains("burger--active")) {
+    document.querySelector("body").style.overflowY = "hidden";
+  } else {
+    document.querySelector("body").style.overflowY = "scroll";
+  }
+});

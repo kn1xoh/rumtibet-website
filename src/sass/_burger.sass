@@ -1,0 +1,58 @@
+.burger
+    display: none
+    flex-direction: column
+    justify-content: space-between
+    align-items: flex-end
+    width: 21px
+    height: 19px
+    z-index: 99
+    @include adaptive(large)
+        display: flex
+    &__span
+        display: block
+        border-radius: 100px
+        width: 100%
+        height: 3px
+        background-color: $white
+    &__span--3
+        width: 50%
+
+.burger-menu
+    visibility: hidden
+    position: fixed
+    inset: 0
+    width: 100%
+    height: 100%
+    background: $dark-green
+    padding: 50px 16px
+    transform: translateX(100%)
+    transition: transform .3s ease, visibility .3s ease, opacity .3s ease
+    opacity: 0
+    z-index: 10
+    &__list
+        display: flex
+        flex-direction: column
+        gap: 20px
+    &__link
+        font-weight: 300
+        font-size: 16px
+        line-height: 91%
+        color: $white
+        text-decoration: none
+
+.burger--active
+    position: fixed
+    right: 22px
+    span
+        transition: transform .2s ease
+        &:nth-child(1)
+            transform: translateY(8px) rotate(-45deg)
+        &:nth-child(2)
+            transform: rotate(45deg)
+        &:nth-child(3)
+            visibility: hidden
+
+.burger-menu--active
+    visibility: visible
+    transform: translateX(0)
+    opacity: 1
