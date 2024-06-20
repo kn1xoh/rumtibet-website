@@ -1,13 +1,22 @@
 .filter
     display: flex
+    flex-wrap: wrap
     align-items: flex-start
     gap: 24px
     width: 100%
-    height: 161px
+    height: auto
     border-radius: 10px
     backdrop-filter: blur(6px)
     background: rgba(255, 255, 255, 0.2)
     padding: 40px 42px
+    @include adaptive(large)
+        width: 950px
+        justify-content: center
+    @include adaptive(medium)
+        width: 650px
+    @include adaptive(small)
+        width: 350px
+        padding: 35px
     &__accordeon
         display: flex
         align-items: center
@@ -33,6 +42,7 @@
         color: $dark
         border-radius: 8px
         background-color: $white
+        z-index: 1
     &__accordeon-item
         color: inherit
         border-radius: 7px

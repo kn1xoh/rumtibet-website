@@ -3,9 +3,14 @@
     color: $white
     background-color: $dark-green
     padding-top: 175px
+    @include adaptive(large)
+        padding-top: 120px
     &__nav
         display: flex
         padding-bottom: 80px
+        @include adaptive(large)
+            flex-direction: column
+            gap: 50px
     &__title
         font-size: 20px
         margin-bottom: 17px
@@ -13,6 +18,8 @@
         font-size: 300
         color: $white
         margin-bottom: 80px
+        @include adaptive(large)
+            margin-bottom: 30px
     &__contacts-wrap
         display: flex
         gap: 24px
@@ -43,6 +50,8 @@
     &__bottom-container
         display: flex
         justify-content: space-between
+        @include adaptive(large)
+            flex-direction: column
     &__policy
         color: inherit
         text-decoration-skip-ink: none

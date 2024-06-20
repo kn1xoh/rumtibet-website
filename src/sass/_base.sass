@@ -7,6 +7,12 @@ $grey: #f3f5f4
 
 :root
     --margin-block: 100px
+    --padding-top: 80px
+
+@media only screen and (max-width: 1260px)
+    :root
+        --margin-block: 50px
+        --padding-top: 50px
 
 @font-face
     font-family: "Nunito Sans"
@@ -56,11 +62,11 @@ $grey: #f3f5f4
             @content
 
     @if $breakpoint == small
-        @media only screen and (max-width: 576px)
+        @media only screen and (max-width: 700px)
             @content
 
     @if $breakpoint == medium
-        @media only screen and (max-width: 840px)
+        @media only screen and (max-width: 1025px)
             @content
 
     @if $breakpoint == large
@@ -70,11 +76,13 @@ $grey: #f3f5f4
 body
     font-family: "Nunito Sans"
     min-width: 390px
-    color: $dark
+    color: $white
 
 .container
     max-width: 1180px
     margin: 0 auto
+    @include adaptive(large)
+        padding: 0 16px
 
 .link-reset
     text-decoration: none

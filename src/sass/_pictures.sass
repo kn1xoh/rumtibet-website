@@ -1,5 +1,5 @@
 .pictures
-    padding-top: 80px
+    padding-top: var(--padding-top)
     &__container
         display: flex
         flex-direction: column
@@ -8,29 +8,38 @@
         margin-bottom: 8px
     &__title
         margin-bottom: 40px
+        @include adaptive(small)
+            margin-bottom: 32px
     &__content
         margin-bottom: 50px
+        @include adaptive(medium)
+            display: flex
+            gap: 20px
+            overflow-x: auto
+            scrollbar-width: none
+            -ms-overflow-style: none
+            &::-webkit-scrollbar
+                display: none
+        @include adaptive(small)
+            margin-bottom: 32px
     &__link-img
         height: 250px
         grid-column: span 3
+        flex-shrink: 0
     &__img
-        width: 280px
-        height: 250px
         object-fit: cover
         border-radius: 6px
+        @include adaptive(medium)
+            width: 280px
     &__btn
         width: 178px
     &__news
         transform: translateY(98px)
+        @include adaptive(large)
+            transform: translateY(60px)
 
 .pictures__link-img--1
     grid-column: span 6
 
 .pictures__link-img--5
     grid-column: span 6
-
-.pictures__img--1
-    width: 580px
-
-.pictures__img--5
-    width: 580px

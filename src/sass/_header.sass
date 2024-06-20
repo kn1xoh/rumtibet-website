@@ -1,4 +1,9 @@
 .header
+    margin-bottom: 460px
+    @include adaptive(large)
+        margin-bottom: 234px
+    @include adaptive(small)
+        margin-bottom: 100px
     &__container
         display: flex
         justify-content: space-between
@@ -9,3 +14,7 @@
         gap: 50px
         @include adaptive(large)
             display: none
+    &__logo-img
+        @include adaptive(small)
+            width: 84px
+            height: auto

@@ -24,7 +24,7 @@
     width: 100%
     height: 100%
     background: $dark-green
-    padding: 50px 16px
+    padding: 50px
     transform: translateX(100%)
     transition: transform .3s ease, visibility .3s ease, opacity .3s ease
     opacity: 0
@@ -33,6 +33,8 @@
         display: flex
         flex-direction: column
         gap: 20px
+        list-style-image: url("../img/arrow-right.svg")
+        list-style-position: inside
     &__link
         font-weight: 300
         font-size: 16px
@@ -42,7 +44,7 @@
 
 .burger--active
     position: fixed
-    right: 22px
+    right: 16px
     span
         transition: transform .2s ease
         &:nth-child(1)

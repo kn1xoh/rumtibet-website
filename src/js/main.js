@@ -72,25 +72,28 @@ const card = document.querySelectorAll(".card");
 const cardInner = document.querySelectorAll(".card__inner-content");
 const cardRating = document.querySelectorAll(".card__rating");
 
-card.forEach((card) => {
-  card.addEventListener("mouseenter", function () {
-    this.querySelector(".card__inner-content").classList.add(
-      "card__inner-content--active"
-    );
-    this.querySelector(".card__rating").classList.add("card__rating--active");
+// Отключение hover при ширине экрана < 700px
+if (window.innerWidth > 700) {
+  card.forEach((card) => {
+    card.addEventListener("mouseenter", function () {
+      this.querySelector(".card__inner-content").classList.add(
+        "card__inner-content--active"
+      );
+      this.querySelector(".card__rating").classList.add("card__rating--active");
+    });
   });
-});
 
-card.forEach((card) => {
-  card.addEventListener("mouseleave", function () {
-    this.querySelector(".card__inner-content").classList.remove(
-      "card__inner-content--active"
-    );
-    this.querySelector(".card__rating").classList.remove(
-      "card__rating--active"
-    );
+  card.forEach((card) => {
+    card.addEventListener("mouseleave", function () {
+      this.querySelector(".card__inner-content").classList.remove(
+        "card__inner-content--active"
+      );
+      this.querySelector(".card__rating").classList.remove(
+        "card__rating--active"
+      );
+    });
   });
-});
+}
 
 // Модальное окно для галереи fancybox
 Fancybox.bind('[data-fancybox="gallery"]', {});

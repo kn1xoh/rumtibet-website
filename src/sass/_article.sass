@@ -8,16 +8,31 @@
     background-color: $white
     font-weight: 700
     color: $dark
+    @include adaptive(large)
+        flex-direction: column
+        gap: 16px
+        width: 285px
+        height: 496px
+        padding: 0
+        // padding-bottom: 16px
     &__img
         object-fit: cover
         border-radius: 6px
+        @include adaptive(large)
+            width: 285px
+            height: 280px
+            border-radius: 6px 6px 0 0
     &__content
         display: flex
         flex-direction: column
         padding: 16px 0
+        @include adaptive(large)
+            width: 285px
+            height: 200px
+            padding: 0 16px 16px 16px
     &__text-wrap
         max-height: 204px
-        width: 294px
+        max-width: 294px
     &__title
         font-size: 24px
         line-height: 133%
@@ -26,6 +41,9 @@
         -webkit-line-clamp: 3
         -webkit-box-orient: vertical
         overflow: hidden
+        @include adaptive(large)
+            font-size: 20px
+            margin-bottom: 16px
     &__text
         font-weight: 400
         font-size: 14px
@@ -45,3 +63,5 @@
         color: $yellow
     &__link-read
         color: $dark-green
+        @include adaptive(large)
+            font-size: 14px

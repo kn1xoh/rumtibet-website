@@ -1,6 +1,6 @@
 .blog
     background-color: $grey
-    padding-top: 80px
+    padding-top: var(--padding-top)
     padding-bottom: var(--margin-block)
     &__container
         display: flex
@@ -10,11 +10,24 @@
         margin-bottom: 8px
     &__title
         margin-bottom: 40px
+        @include adaptive(small)
+            margin-bottom: 32px
     &__content
         display: flex
         flex-wrap: wrap
         gap: 20px
-        width: 1180px
+        width: 100%
         margin-bottom: 50px
+        @include adaptive(large)
+            flex-wrap: nowrap
+            overflow-x: auto
+            scrollbar-width: none
+            -ms-overflow-style: none
+            &::-webkit-scrollbar
+                display: none
+        @include adaptive(small)
+            margin-bottom: 32px
+    &__article
+        flex-shrink: 0
     &__btn
         width: 220px
