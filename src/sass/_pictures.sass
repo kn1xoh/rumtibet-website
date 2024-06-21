@@ -26,6 +26,7 @@
         height: 250px
         grid-column: span 3
         flex-shrink: 0
+        transition: opacity .2s ease
     &__img
         object-fit: cover
         border-radius: 6px
@@ -43,3 +44,17 @@
 
 .pictures__link-img--5
     grid-column: span 6
+
+@media (any-hover: hover)
+    .pictures__link-img:hover
+        position: relative
+        opacity: 0.9
+        &::after
+            content: ""
+            position: absolute
+            top: calc(50% - 12px)
+            left: calc(50% - 12px)
+            display: block
+            background: url("../img/zoom-icon.svg")
+            width: 24px
+            height: 24px

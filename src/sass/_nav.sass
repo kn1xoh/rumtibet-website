@@ -3,7 +3,27 @@
         display: flex
         gap: 24px
     &__link
-        font-weight: 400
+        font-weight: 600
         font-size: 18px
         color: $white
         text-decoration: none
+        transition: color .2s ease, after .2s ease
+
+@media (any-hover: hover)
+    .nav__link
+        position: relative
+        &:hover
+            color: $dark-green
+            z-index: 1
+            &::after
+                content: ""
+                position: absolute
+                top: -1px
+                left: -8px
+                display: block
+                width: calc(100% + 16px)
+                height: 115%
+                background-color: $white
+                border-radius: 10px
+                z-index: -1
+                margin: 0 auto

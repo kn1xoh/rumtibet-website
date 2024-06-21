@@ -7,20 +7,29 @@
     border: none
     border-radius: 4px
     background-color: $dark-green
-    font-weight: 400
+    font-weight: 600
     font-size: 16px
     line-height: 125%
     color: $white
     cursor: pointer
+    transition: color .2s ease, background-color .2s ease, border .2s ease
 
 .btn--white
     width: 213px
     height: 52px
     background-color: $white
-    font-weight: 700
     color: $dark-green
 
 .btn--large
     width: 200px
     height: 52px
-    font-weight: 600
+
+@media (any-hover: hover)
+    .btn:hover
+        color: $dark-green
+        background-color: $white
+        border: 1px solid $dark-green
+
+    .btn--white:hover
+        color: $white
+        background-color: $dark-green

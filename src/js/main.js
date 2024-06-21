@@ -72,8 +72,8 @@ const card = document.querySelectorAll(".card");
 const cardInner = document.querySelectorAll(".card__inner-content");
 const cardRating = document.querySelectorAll(".card__rating");
 
-// Отключение hover при ширине экрана < 700px
-if (window.innerWidth > 700) {
+// Отключение hover при ширине экрана < 1260px
+if (window.innerWidth > 1260) {
   card.forEach((card) => {
     card.addEventListener("mouseenter", function () {
       this.querySelector(".card__inner-content").classList.add(
