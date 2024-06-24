@@ -32,9 +32,17 @@
     &__social-wrap
         display: flex
         gap: 16px
+    &__social-icon
+        color: $white
+        transition: color .1s ease
+        &:active
+            color: $yellow
     &__item
+        transition: color .1s ease
         &:not(:last-child)
             margin-bottom: 16px
+        &:active
+            color: $yellow
     &__item-svg
         color: inherit
         margin-right: 8px
@@ -79,5 +87,8 @@
     max-width: 280px
 
 @media (any-hover: hover)
-    .footer__item:hover
-        color: $yellow
+    .footer
+        &__item:hover
+            color: $yellow
+        &__social-icon:hover
+            color: $yellow

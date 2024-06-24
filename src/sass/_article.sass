@@ -33,6 +33,10 @@
     &__text-wrap
         max-height: 204px
         max-width: 294px
+    &__title-link
+        &:active
+            text-decoration: underline
+            text-decoration-skip-ink: none
     &__title
         font-size: 24px
         line-height: 133%
@@ -65,6 +69,9 @@
         color: $dark-green
         @include adaptive(large)
             font-size: 14px
+        &:active
+            text-decoration: underline
+            text-decoration-skip-ink: none
 
 @media (any-hover: hover)
     .article__title-link:hover, .article__link-read:hover
